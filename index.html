@@ -204,6 +204,11 @@
       document.querySelector('.min').innerText = minutes;
       document.querySelector('.sec').innerText = seconds;
 
+      if(distance < 0){
+        clearInterval(x);
+        document.querySelector('.title').innerText = 'Hurray, Countdown is Over'
+      }
+
 
     }, 1000) 
 
