@@ -178,9 +178,9 @@
 </div>
    
   <div class="social">
-    <a href="https://www.facebook.com/shiv901/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-    <a href="https://www.linkedin.com/in/shivansh-raghav-7985b6130/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/shiv901" target="_blank"><i class="fab fa-github-square"></i></a>
+    <a id="facebook" href="https://www.facebook.com/shiv901/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+    <a id="linkedin" href="https://www.linkedin.com/in/shivansh-raghav-7985b6130/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a id="github" href="https://github.com/shiv901" target="_blank"><i class="fab fa-github-square"></i></a>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -194,9 +194,9 @@
       var now = new Date().getTime()
       var distance = countDownDate - now
 
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var days = ("0" + Math.floor(distance / (1000 * 60 * 60 * 24))).slice(-2);
       var hours = ("0" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),2)).slice(-2);
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var minutes = ("0" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).slice(-2);
       var seconds = ("0" +Math.floor((distance % (1000 * 60)) / 1000)).slice(-2);
 
       document.querySelector('.day').innerText = days;
